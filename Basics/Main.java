@@ -1,5 +1,6 @@
 package com.Arrays.Basics;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 
@@ -47,11 +48,10 @@ public class Main {
 
     public static int[] sortIntegers(int[] array){
         //code
-        int[] myTempArr = new int[array.length];
+        
         //copy array
-        for (int i=0; i < array.length; i++) {
-            myTempArr[i] = array[i];
-        }
+
+        int[] myTempArr = Arrays.copyOf(array, array.length);
         // sort algo
         for (int i = 0; i < myTempArr.length; i++) {
             for (int j = (i + 1); j < myTempArr.length; j++) {
